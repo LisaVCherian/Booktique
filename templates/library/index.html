@@ -29,10 +29,57 @@
         font-family: sans-serif;
       }
       .col-lg-6 {
-        padding-left: 20%;
+        padding-left: 14%;
+        overflow: hidden;
+        border-collapse: separate;
       }
       .jumbotron {
         margin-bottom: 0px;
+        overflow: hidden;
+      }
+      .button1 {
+        display: inline-block;
+        border-radius: 4px;
+        background-color: #f4511e;
+        border: none;
+        color: #ffffff;
+        text-align: center;
+        font-size: 18px;
+        padding: 12px;
+        width: 200px;
+        transition: all 0.5s;
+        cursor: pointer;
+        /* margin: 5px; */
+      }
+
+      .button1 span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+      }
+
+      .button1 span:after {
+        content: "\00bb";
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        /* right: -20px; */
+        transition: 0.5s;
+      }
+
+      .button1:hover span {
+        padding-right: 25px;
+        color: white;
+      }
+
+      .button1:hover span:after {
+        opacity: 1;
+        right: 0;
+        color: white;
+      }
+      img {
+        margin-left: 28px;
       }
     </style>
   </head>
@@ -79,24 +126,16 @@
 
       <div class="row">
         <div class="col-lg-6">
-          <img src="{% static "images/AdminIcon.png" %}" width="50%" alt=""><br /><br />
-          <a
-            class="btn btn-danger btn-lg"
-            style="text-align: center; border-radius: 0px"
-            href="/adminclick"
-            role="button"
-            >Admin Panel</a
+          <img src="{% static "images/AdminIcon.png" %}" width="30%" alt=""><br /><br />
+          <a class="button1" href="/adminclick" role="button"
+            ><span>Admin Panel</span></a
           >
         </div>
 
         <div class="col-lg-6">
-          <img src="{% static "images/student.png" %}" width="50%" alt=""><br /><br />
-          <a
-            class="btn btn-danger btn-lg"
-            style="border-radius: 0px"
-            href="/studentclick"
-            role="button"
-            >Student Panel</a
+          <img src="{% static "images/student.png" %}" width="30%" alt=""><br /><br />
+          <a class="button1" href="/studentclick" role="button"
+            ><span>Student Panel</span></a
           >
         </div>
       </div>

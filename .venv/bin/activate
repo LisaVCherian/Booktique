@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV=$(cygpath "C:\Users\LisaV\Downloads\library-management\library-management\.venv")
+VIRTUAL_ENV=$(cygpath "C:\Users\LisaV\Desktop\library-management\library-management\.venv")
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
