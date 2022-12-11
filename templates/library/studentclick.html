@@ -1,41 +1,69 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-    <title>LMS Django</title>
+    <title>Booktique</title>
     <style media="screen">
-    .jumbotron{
-      margin-bottom: 0px;
-    }
-    .jumbotron h1{
-      text-align: center;
-    }
+      .jumbotron {
+        margin-bottom: 0px;
+      }
+      .jumbotron h1 {
+        text-align: center;
+      }
+      .btn1 {
+        border-radius: 10px;
+        background-color: #2c51f7;
+        border: none;
+        color: #ffffff;
+        text-align: center;
+        font-size: 15px;
+        padding: 12px 32px;
+        width: 200px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 10px;
+        font-weight: 400;
+      }
+      a:hover {
+        opacity: 100;
+        color: white;
+        text-decoration: none;
+        transition: 0.5s;
+      }
     </style>
-
   </head>
   <body>
-      {% include "library/navbar.html" %}
-<br><br>
-      <div class="jumbotron">
-        <h1 class="display-4">Hello, Student</h1>
-        <p class="lead">Welcome to Online Library Management System.</p>
-        <hr class="my-4">
-        <p>You can access various features after Login.</p>
-        <p class="lead">
-          <a class="btn btn-primary btn-lg" style="border-radius: 0%;" href="studentsignup" role="button">SignUp</a>
-          <a class="btn btn-primary btn-lg" style="border-radius: 0%;" href="studentlogin" role="button">Login</a>
-        </p>
-      </div>
+    {% include "library/navbar.html" %}
+    <br /><br />
+    <div class="jumbotron">
+      <h1 class="display-4">Hello, Student</h1>
+      <p class="lead">Welcome to Booktique.</p>
+      <hr class="my-4" />
+      <p>You can access various features after Login.</p>
+      <br />
+      <p class="lead">
+        <a class="btn1" href="studentsignup" role="button">SignUp</a>
+        <a class="btn1" href="studentlogin" role="button">Login</a>
+      </p>
+    </div>
 
-
-      {% include "library/footer.html" %}
+    {% include "library/footer.html" %}
   </body>
 </html>
